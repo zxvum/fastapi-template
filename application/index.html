@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h2>Application Overview</h2>
+    <p>This API is developed using FastAPI, SQLAlchemy, Poetry, Redis, Celery, and python-dotenv for an AI-powered
+        application that generates articles based on YouTube videos and other parameters.</p>
+
+
+    <h2>Useful Links</h2>
+    <ul>
+        <li><a href="/docs">Swagger Documentation</a></li>
+        <li><a href="/redoc">ReDoc Documentation</a></li>
+    </ul>
+
+    <h2>Architecture</h2>
+    <p>The application follows a microservice architecture with the following components:</p>
+
+    <pre>
+        <code>
+          - app
+              - main.py
+              - auth_service
+                - __init__.py
+                - routes.py
+                - models.py
+                - controllers.py
+              - user_service
+                - __init__.py
+                - routes.py
+                - models.py
+                - controllers.py
+              - database
+                - __init__.py
+                - models.py
+                - repository.py
+              - config
+                - __init__.py
+                - settings.py
+                - dotenv.py
+              - docker-compose.yml
+              - Dockerfile
+              - requirements.txt
+              - .env
+        </code>
+      </pre>
+
+    <ul>
+        <li><strong>main.py:</strong> The entry point of the application.</li>
+        <li><strong>auth_service:</strong> Handles authentication-related functionality with its own routes, models, and
+            controllers.
+        </li>
+        <li><strong>user_service:</strong> Manages user-related functionality with its own routes, models, and
+            controllers.
+        </li>
+        <li><strong>database:</strong> Contains the database models and repository for interacting with the database.
+        </li>
+        <li><strong>config:</strong> Holds configuration files, including settings and dotenv management.</li>
+    </ul>
+
+    <h2>Tools Used</h2>
+    <ul>
+        <li><a href="https://fastapi.tiangolo.com/">FastAPI</a></li>
+        <li><a href="https://www.sqlalchemy.org/">SQLAlchemy</a></li>
+        <li><a href="https://python-poetry.org/">Poetry</a></li>
+        <li><a href="https://redis.io/">Redis</a></li>
+        <li><a href="https://docs.celeryproject.org/">Celery</a></li>
+        <li><a href="https://pypi.org/project/python-dotenv/">python-dotenv</a></li>
+    </ul>
+</div>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
